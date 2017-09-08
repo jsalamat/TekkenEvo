@@ -4,7 +4,7 @@ html, body{
 	height: 100%;
 	margin: 0;
 	padding: 0;
-	font-family: Helvitica, sans-serif;
+	font-family: Helvetica, sans-serif;
 	background: rgb(21, 34, 47);
 }
 
@@ -28,12 +28,12 @@ nav:target a{
 	display: block;
 }
 
-nav > *nth-child(1) {
+nav > *:nth-child(1) {
 	display: block;
 	width: 5em;
 }
 
-nav > nth-child(1) span{
+nav > *:nth-child(1) span{
 	position: relative;
 	display: block;
 	width: 100%;
@@ -41,5 +41,4 @@ nav > nth-child(1) span{
 	margin-top: .25em;
 	background: #fff;
 }
-}
-}
+
