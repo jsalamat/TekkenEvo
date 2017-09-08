@@ -10,7 +10,7 @@ html, body{
 
 nav{
 	display: block;
-	width: 25%;
+	width: 20%;
 	margin: 0;
 }
 
@@ -19,9 +19,14 @@ nav a{
 	width: 100%;
 	padding: 10%;
 	font-size: 1.5em;
-	border: 3px solid #fff;
+	border: 1px solid #fff;
 	background: #333;
 	color: #fff;
+	text-decoration: none;
+}
+
+nav:hover a{
+	text-decoration: none;
 }
 
 nav:target a{
@@ -41,4 +46,33 @@ nav > *:nth-child(1) span{
 	margin-top: .25em;
 	background: #fff;
 }
+
+nav > *:nth-child(1) span::before{
+	content:"";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 100%;
+	background: red;
+	transition: width 1s;
+}
+
+nav > *:nth-child(1):hover span::before{
+	animation: open 1s forward;
+}
+
+nav > *:nth-child(1):hover span:nth-child(2)::before{
+	animation-delay: .15s;
+}
+
+nav > *:nth-child(1):hover span:nth-child(3)::before{
+	animation-delay: .3s;
+}
+
+@keyframes open {
+	0% {width: 0;}
+	100% {width: 100%;}
+}
+
 
